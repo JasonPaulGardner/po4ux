@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <title>Page Optimization Presentation by Jason Gardner</title>
+    
+    <meta name="description" content="A Page Optimization Brown Bag Presentation" />
+    <meta name="author" content="Jason Gardner" />
+    <link href="css/po.css" rel="stylesheet" />
+</head>
+<body class="impress-not-supported">
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+<article id="impress">
+
+  <section id="start" class="step slide" data-x="9000" data-y="0">
+   <h1>Web Page Optimization</h1>
+   <h2>for Improved User Experience</h2>
+  </section>
+
+<section class="step slide" data-x="10000" data-y="0">
+	<h2>Why Worry About Performance</h2>
+ <dl>
+  <dt>Google says <span class="cite">[1]</span></dt>
+  <dd>Half a second delay caused a 20% drop in traffic. Half a second delay killed user satisfaction.</dd>
+  <dt>The Aberdeen Group discovered<span class="cite">[2]</span></dt>
+  <dd>A one second delay equates to an average 7% reduction in conversions.
+  <br>For the $100,000/day ecommerce site, a one-second delay means $2.5 million in lost revenues in a year</dd>
+  <dt>Forrester reports <span class="cite">[3]</span></dt>
+  <dd>Users expect pages to load in under two seconds.
+  <br>40% of users will abandon a site if page load time is more than three seconds.</dd>
+  <dt>Shopzilla found <span class="cite">[4]</span></dt>
+  <dd>Better performing website (speed improvements) increased revenue by 1-12%, increased page views by 25%
+and reduced hardware by 50%.</dd>
+  </dl>
+  <div class="cite refs">
+  <p>[1] Marissa Mayer - Then Vice President of Google [at 2006 Web 2.0 Summit]</p>
+  <p>[2] “The Performance of Web Applications: Customers Are Won or Lost in One Second” November 2008, Aberdeen Group</p>
+  <p>[3] “eCommerce Web Site Performance Today” study conducted by Forrester Research for Akamai Technologies, Inc.</p>
+  <p>[4] Philip Dixon VP Engineering Shopzilla [at O‟Oreilly 2009 Velocity conference]</p>
+  <div>
+</section>
+
+<section class="step slide" data-x="11000" data-y="0">
+<h2>Why Worry About Performance</h2>
+<h3>performance optimized sites</h3>
+<ul>
+<li>cost less in hardware and network</li>
+<li>get more revenue</li>
+<li>retain customers</li>
+<li>attain higher page views</li>
+<li>are more suited to mobile usage</li>
+<li>are percieved as being more credible and of a higher quality</li>
+<li>since august 2011 Google take it into account for organic rankings</li>
+</ul>
+</section>
+
+<section class="step slide" data-x="12000" data-y="0">
+	<h2>The Life of a Page</h2>
+        <h3>&nbsp;</h3>
+        <img alt="The Life of a Page" id="life" class="shadow center" src="images/lifecycle.png" />
+</section>
+
+<section class="step slide" data-x="13000" data-y="0">
+	<h2>What is taking so long</h2>
+        <h3>&nbsp;</h3>
+        <div>
+          <img alt="80% frontend" id="frontend80" class="right rotate shadow" src="images/frontend80.png" />
+        <p>80% of the end-user response time is spent on the front-end. Most of this time is tied up in downloading all the components in the page: images, stylesheets, scripts, etc.<span class="cite">[1]</span></p>
+        <p>If you’re worried about availability and scalability, focus on the backend. But if you’re worried about user experience and page load speed focusing on the frontend is your best bet.</p>
+        </div>
+<div class="cite refs">
+  <p>[1] Steve Souders - the Performance Golden Rule blog post</p>
+  <div>
+</section>
+
+<section class="step slide" data-x="14000" data-y="0">
+	<h2>What is taking so long</h2>
+        <h3>The Usual Suspects</h3>
+        <div>
+          <img alt="The Usual Suspects" id="usualsuspects" class="right rotate shadow" src="images/theUsualSuspects.jpg" />
+          <ul>
+            <li>Too many connections</li>
+            <li>Too many KB's</li>
+            <li>Unnecessary data transfers</li>
+            <li>Page complexity</li>
+            <li>Poor page render order</li>
+            <li>Scaled images</li>
+          </ul>
+        
+        </div>
+</section>
+
+<section class="step slide" data-x="15000" data-y="0">
+          <img alt="Downloading" id="pleasewait" class="shadow center" src="images/downloading.png" />
+</section>
+
+<section class="step slide" data-x="16000" data-y="0">
+	<h2>Page Optimization</h2>
+	<h3>Gzip Components</h3>
+<div>
+	<img alt="gzip" id="gzip" class="right rotate shadow" src="images/gzip.png" />
+<p>Gzipping generally reduces the response size by about 70%. Approximately 90% of today's Internet traffic travels through browsers that claim to support gzip.</p>
+        <p>Image and PDF files should not be gzipped because they are already compressed. Trying to gzip them not only wastes CPU but can potentially increase file sizes.</p>
+<p>Gzipping as many file types as possible is an easy way to reduce page weight and accelerate the user experience.</p>
+        </p>
+</section>
+
+
+<section class="step slide" data-x="17000" data-y="0">
+	<h2>Page Optimization</h2>
+	<h3>Add an Expires or a Cache-Control Header</h3>
+<div>
+		<img alt="http-caching" id="http-caching" class="right rotate shadow" src="images/http-caching.png" />
+        <p>
+        There are two aspects to this rule:
+<dl>
+<dt>For static components:</dt>
+<dd>Implement "Never expire" policy by setting far future Expires header</dd>
+<dt>For dynamic components:</dt>
+<dd>Use an appropriate Cache-Control header to help the browser with conditional requests</dd>
+<dl>
+</p>
+
+</section>
+
+
+<section class="step slide" data-x="18000" data-y="0">
+	<h2>Page Optimization</h2>
+	<h3>Minimize HTTP Requests</h3>
+        <div>
+          <img alt="Too many http requests" id="morehttp" class="right rotate shadow" src="images/more_http_request_slow_page.png" />
+          <p>This is the most important guideline for improving performance for first time visitors.</p>
+        <dl>
+          <dt>Combined files</dt>
+          <dd>Combine all scripts into a single script, and similarly combine all CSS into a single stylesheet.</dd>
+          <dt>Image Sprites</dt>
+          <dd>CSS Sprites are a proven method for reducing the number of image requests.</dd>
+          <dt>Data Urls</dt>
+          <dd>Inline images use the data: URL scheme to embed the image data in the actual page. Combining inline images into your (cached and compressed) stylesheets is a way to reduce HTTP requests and avoid increasing the size of your pages.</dd>
+        </dl>        
+        
+        </div>
+</section>
+
+<section class="step slide" data-x="19000" data-y="0">
+<h2>Page Optimization</h2>
+	<h3>Use a Content Delivery Network</h3>
+<div>	
+	<img alt="cdn" id="cdn" class="right rotate shadow" src="images/cdn.jpg" />
+        <p>In addition to reduced page load times due to shorter delivery routes by directing request to the nearest server, CDNs offer other advantages like
+        <dl>
+          <dt>Higher capacity and scale</dt>
+          <dd>A network of servers has access to vastly increased bandwidth, and so can process unexpected bursts of traffic</dd>
+          <dt>Higher Availability</dt>
+          <dd>Because content is housed on several distributed platforms, it is less vulnerable to downtime due to power, network or hardware failures</dd>
+          <dt>Lower delivery cost</dt>
+          <dd>A CDN offloads traffic on a backbone network by redirecting traffic to edge servers, freeing up capacity and lowering costs</dd>
+        </dl>
+        <p>In addition to the above benifits sourcing common javascript files (jQuery) from shared CDN (either Google or Microsoft) allows you to benefit from cross site caching</p>
+        
+</div>
+</section>
+
+<section class="step slide" data-x="20000" data-y="0">
+	<h2>Page Optimization</h2>
+	<h3>Put Stylesheets at the Top</h3>
+<div>
+		<img alt="CSS" id="css" class="right rotate shadow" src="images/css.jpg" />
+        <p>The HTML specification clearly states that stylesheets are to be included in the HEAD of the page this is because putting stylesheets in the HEAD allows the page to render progressively.</p>
+<p>Many browsers, including Internet Explorer block rendering to avoid having to redraw elements of the page if their styles change. The user is stuck viewing a blank white page or a flash of unstyled content neither of which is desirable".</p>
+<p>The optimal solution is to follow the HTML specification and load your stylesheets in the document HEAD.</p>
+</div>
+</section>
+
+<section class="step slide" data-x="21000" data-y="0">
+	<h2>Page Optimization</h2>
+	<h3>Put Scripts at the Bottom</h3>
+<div>
+		<img alt="Javascript" id="js" class="right rotate shadow" src="images/javascript.jpg" />
+<p>With scripts, progressive rendering is blocked for all content below the script. Moving scripts as low in the page as possible means there's more content above the script that is rendered sooner.</p>
+<p>Additionally script tags block parallel downloads as the browser must first download then parse the script before continuing.</p>
+</div>
+</section>
+
+<section class="step slide" data-x="22000" data-y="0">
+	<h2>Page Optimization</h2>
+	<h3>Make JavaScript and CSS External</h3>
+<div>
+		<img alt="External Files" id="file" class="right rotate shadow" src="images/external.png" />
+<p>Using external files generally produces faster pages because the JavaScript and CSS files are cached by the browser.</p>
+<p>JavaScript and CSS that are inline in HTML documents must be downloaded every time the HTML document is requested.</p>
+<p>This reduces the number of HTTP requests that are needed, but increases the size of the HTML document.</p>
+<p>However this should only be considered for sites that are viewed with a high number of unprimed cache's</p>
+</div>
+</section>
+
+<section class="step slide" data-x="23000" data-y="0">
+	<h2>Page Optimization</h2>
+	<h3>Minify JavaScript and CSS</h3>
+        <div>
+<img alt="minification" id="minify" class="right rotate shadow" src="images/honey-i-shrunk-the-kids.jpg" />
+        
+<p>When code is minified all comments are removed, as well as unneeded white space characters (space, newline, and tab). This reduces the size of the downloaded file with out changing the functionality provided.</p>
+<p>In a survey of ten top U.S. web sites, minification achieved a 21% size reduction versus 25% for obfuscation.</p>
+<p>Obfuscation is an alternative optimization that can be applied to source code. It's more complex than minification and thus more likely to generate bugs as a result of the obfuscation step itself.</p>       
+<p>Although obfuscation has a higher size reduction, minifying JavaScript is less risky.</p>
+<p>Even if you gzip your scripts and styles, minifying them will still reduce the size by 5% or more.</p>
+        </div>
+</section>
+
+<section class="step slide" data-x="24000" data-y="0">
+	<h2>Page Optimization</h2>
+	<h3>Avoid Redirects</h3>
+        <div>
+        <img alt="redirect" id="redirect" class="right rotate shadow" src="images/redirect.gif" />
+        <p>The main thing to remember is that redirects slow down the user experience. Inserting a redirect between the user and the HTML document delays everything in the page since nothing in the page can be rendered and no components can start being downloaded until the HTML document has arrived.</p>
+        <p>As such redirects should be used sparingly and with full awareness of the impact they have on the user experience.</p>
+        </div>
+</section>
+
+
+<section class="step slide" data-x="25000" data-y="0">
+	<h2>Page Optimization</h2>
+	<h3>Use Cookie-free Domains</h3>
+<div>
+
+
+		<img alt="cookie monster" id="cookie" class="right rotate shadow" src="images/cookie-monster.jpg" />
+<p>When the browser makes a request for a static content and sends cookies together with the request, the server doesn't have any use for those cookies. So they only create network traffic for no good reason.</p>
+<p>Create a subdomain and host all your static components there.</p>
+<p>Always host you site with a www. domain name this allows you to more easily create cookie free subdomains</p> 
+<p>If cookies are unavoidable minamize their impact on the UX by</p>
+<ul>
+<li>Eliminating unnecessary cookies.</li>
+<li>Keeping cookie sizes as low as possible.</li>
+<li>Setting cookies at the appropriate domain level so other sub-domains are not affected</li>
+<li>Setting an appropriate Expires date.</li>
+</ul>
+</div>
+</section>
+
+<section class="step slide" data-x="26000" data-y="0">
+	<h2>Page Optimization</h2>
+	<h3>Reduce DNS Lookups</h3>
+        <div>
+        <img alt="dns" id="dns" class="right rotate shadow" src="images/dns.jpg" />
+        <p>DNS lookups add delays to the initial requests to a host. Making requests to a large number of different hosts has an impact on performance.</p>
+        <p>DNS has a cost. It typically takes 20-120 milliseconds for DNS to lookup the IP address for a given hostname. The browser can’t download anything from this hostname until the DNS lookup is completed.</p>
+        
+ </div>
+</section>
+
+<section class="step slide" data-x="27000" data-y="0">
+	<h2>Page Optimization</h2>
+	<h3>Remove Duplicate Scripts</h3>
+        <div>
+<img alt="Remove Duplicates" id="duplicate" class="right rotate shadow" src="images/duplicate.jpg" />
+        
+<p>This isn’t as unusual as you might think. A review of the ten top U.S. web sites shows that two of them contain a duplicated script. </p>
+<p>Content management system and web frameworks are the usual cause of duplicate script tags. Be aware of the issue and consider implementing a script management system.</p>
+        </div>
+</section>
+
+<section class="step slide" data-x="28000" data-y="0">
+	<h2>Other Things to consider</h2>
+ <ul>
+<li> Configure / remove Etags</li>
+<li> Flush buffer early</li>
+<li> Keep request to one packet in size (1500 bytes)</li>
+<li> Use GET for AJAX request</li>
+<li> Post-load companents</li>
+<li> Preload components</li>
+<li> Reduce the number of Dom elements</li>
+<li> Minimize the number of iframes</li>
+<li> No 404s</li>
+<li> Minimize Dom access</li>
+<li> Remove unused CSS</li>
+<li> Use efficient CSS selectors</li>
+<li> Pack components into a multipart document</li>
+ </ul>
+</section>
+
+<section class="step slide" data-x="29000" data-y="0">
+	<h2>Thats A Lot Of Work</h2>
+        <img alt="Work" id="work" class="shadow center" src="images/ALotOfWork.jpg" />
+</section>
+
+<section class="step slide" data-x="30000" data-y="0">
+	<h2>Isn't there a Magic Pill</h2>
+        <h3>that will make it all better</h3>
+        <img alt="Magic Pill" id="pill" class="shadow center" src="images/magic-pill.jpeg" />
+</section>
+
+
+<section class="step slide" data-x="32000" data-y="0">
+	<h2>Introducing mod_pagespeed</h2>
+        <h3>by google.</h3>
+        <p><strong>Features</strong></p>
+<ul>
+<li>Automatic website and asset optimization</li>
+<li>Latest web optimization techniques</li>
+<li>40+ configurable optimization filters</li>
+<li>Free, open-source, and frequently updated</li>
+</ul>
+<p>Get it at<br>https://developers.google.com/speed/pagespeed/mod</p>
+</section>
+
+
+
+
+<section class="step slide" data-x="34000" data-y="0">
+	<h2>Finaly</h2>
+	<h3>The Performance Business Pitch</h3>
+        <p>
+        In 2009 as the final post of the <cite>Performance advent calendar</cite> experiment, Stoyan Stefanov created a downloadable
+presentation making the case for prioritizing performance improvements.
+        </p>
+        <p>That presentation is still relevent and available at 
+http://www.phpied.com/the-performance-business-pitch/
+        </p>
+</section>
+
+
+
+<section class="step slide" data-x="35000" data-y="0">
+	<h2>If You Want to Know More</h2>
+        <p>I recomend the following resources</p>
+        <dl id="iwanttoknowmore">
+           <dt>O'Reilly Velocity Conference</dt>
+           <dd>http://blip.tv/oreilly-velocity-conference</dd>
+           <dt>Jason Weber's presentation on High-Performance Best Practices for Web Sites</dt>
+           <dd>http://ecn.channel9.msdn.com/o9/mix/10/mp4/CL29.mp4</dd>
+           <dt>Andrew Killen's Presentation Website Performance Optimization<dt>
+           <dd>http://wordpress.tv/2012/06/07/andrew-killen-website-performance-optimization/</dd>
+           <dt>Stoyan Stefanov's presentation High Performance Web Pages - 20 new best practices</dt>
+           <dd>http://www.slideshare.net/stoyan/high-performance-web-pages-20-new-best-practices</dd>
+           <dt>Yahoo Developer Network</dt>
+           <dd>http://developer.yahoo.com/performance/rules.html</dd>
+           <dt>Google Developers Articles</dt>
+           <dd>https://developers.google.com/speed/articles/</dd>
+           <dt>Steve Souders Books and Site "High Performance Web Sites"</dt>
+           <dd>http://stevesouders.com/hpws/rules.php</dd>           
+        </dl>
+</section>
+
+</article>
+
+
+
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+
+</body>
+</html>
+
