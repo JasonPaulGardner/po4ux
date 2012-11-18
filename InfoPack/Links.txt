@@ -1,0 +1,24 @@
+Microsoft MIX10 - HTML5: High-Performance Best Practices for Web Sites
+http://www.youtube.com/watch?v=6Rz3ETB-8Ac
+
+Google Marissa Mayer speed research
+http://www.youtube.com/watch?v=BQwAKsFmK_8
+
+The Psychology of Web Performance
+http://www.websiteoptimization.com/speed/tweak/psychology-web-performance/
+
+Using site speed in web search ranking
+http://googlewebmastercentral.blogspot.com.au/2010/04/using-site-speed-in-web-search-ranking.html
+
+What Makes Web Sites Credible? 10 Years Later
+http://www.sanjaykairam.com/blog/2010/01/what-makes-web-sites-credible-10-years-later/
+
+
+
+tests
+
+Google PageSpeed Insights
+https://developers.google.com/speed/pagespeed/insights
+
+WebSiteOptimization.com
+http://www.websiteoptimization.com/services/analyze/
