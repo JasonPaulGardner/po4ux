@@ -2,7 +2,7 @@ Microsoft MIX10 - HTML5: High-Performance Best Practices for Web Sites
 http://www.youtube.com/watch?v=6Rz3ETB-8Ac
 
 Google Marissa Mayer speed research
-http://www.youtube.com/watch?v=BQwAKsFmK_8
+http://blip.tv/oreilly-velocity-conference/velocity-09-marissa-mayer-in-search-of-a-better-faster-stronger-web-2305322
 
 The Psychology of Web Performance
 http://www.websiteoptimization.com/speed/tweak/psychology-web-performance/
@@ -13,6 +13,8 @@ http://googlewebmastercentral.blogspot.com.au/2010/04/using-site-speed-in-web-se
 What Makes Web Sites Credible? 10 Years Later
 http://www.sanjaykairam.com/blog/2010/01/what-makes-web-sites-credible-10-years-later/
 
+Nicole Sullivan: Design Fast Websites
+https://www.youtube.com/watch?v=7HC3OV1dDZ4
 
 
 tests
@@ -22,3 +24,15 @@ https://developers.google.com/speed/pagespeed/insights
 
 WebSiteOptimization.com
 http://www.websiteoptimization.com/services/analyze/
+
+Tools
+
+Markup Validation Service
+http://validator.w3.org/
+
+Link Checker
+http://validator.w3.org/checklink
+
+WebLint
+http://cmpt165.csil.sfu.ca/weblint/
+
